@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8"?><database>
+    <element extends="task" label="Loaner request" max_length="40" name="x_366075_loaner_re_loaner_request" type="collection">
+        <element attributes="edge_encryption_enabled=true" choice="1" default="sc" label="Depot" max_length="40" name="u_deport" type="string">
+            <choice>
+                <element inactive_on_update="false" label="New York" sequence="0" value="ny"/>
+                <element inactive_on_update="false" label="London" sequence="1" value="london"/>
+                <element inactive_on_update="false" label="Buenos Aries" sequence="2" value="ba"/>
+                <element inactive_on_update="false" label="Santa Clara" sequence="3" value="sc"/>
+                <element inactive_on_update="false" label="Singapore" sequence="4" value="singapore"/>
+                <element inactive_on_update="false" label="Sydney" sequence="5" value="sydney"/>
+                <element inactive_on_update="false" label="Other" sequence="6" value="other"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="End Date" mandatory="true" max_length="40" name="u_end_date" type="glide_date"/>
+        <element attributes="edge_encryption_enabled=true" choice="3" default="cmdb__ci_computer" label="Item type" max_length="40" name="u_item_type" type="string">
+            <choice>
+                <element inactive_on_update="false" label="Laptop" sequence="0" value="cmdb__ci_computer"/>
+                <element inactive_on_update="false" label="Mobile Phone" sequence="1" value="cmbd_ci_mobile_device"/>
+                <element inactive_on_update="false" label="Projector" sequence="2" value="cmbd_ci_projector"/>
+            </choice>
+        </element>
+        <element attributes="edge_encryption_enabled=true" label="Location is to used" max_length="40" name="u_location_is_to_used" type="string"/>
+        <element label="Requested for" mandatory="true" max_length="32" name="u_reference_5" reference="sys_user" type="reference"/>
+        <element attributes="edge_encryption_enabled=true" label="Start Date" mandatory="true" max_length="40" name="u_start_date" type="glide_date_time"/>
+    </element>
+</database>
